@@ -6,7 +6,7 @@ import { usePaymentCycles } from "../../hooks/usePaymentCycles";
 
 const PayrollOverview = () => {
   const progressRef = useRef<HTMLDivElement>(null);
-  const { cycles, loading } = usePaymentCycles();
+  const { cycles } = usePaymentCycles();
   const latestCycle = cycles.find(c => c.status === "In Progress") || cycles[0];
 
   const payrollData = [
