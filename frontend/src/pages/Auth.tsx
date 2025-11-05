@@ -79,7 +79,7 @@ const Auth = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="input-field pl-10"
+                className="input-field pl-10 w-full outline-none p-2 rounded-md"
                 placeholder="Enter your email"
                 required
               />
@@ -94,7 +94,7 @@ const Auth = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="input-field pl-10"
+                className="input-field pl-10 outline-none w-full p-2 rounded-md"
                 placeholder="Enter your password"
                 required
               />
@@ -117,7 +117,7 @@ const Auth = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn-primary w-full disabled:opacity-50"
+            className="btn-primary px-3 py-2 rounded-md w-full disabled:opacity-50"
           >
             {loading ? "Please wait..." : isLogin ? "Sign In" : "Sign Up"}
           </button>
@@ -126,7 +126,7 @@ const Auth = () => {
         <div className="mt-6 text-center">
           <button
             onClick={() => setIsLogin(!isLogin)}
-            className="text-primary hover:text-primary-dark transition-colors text-sm"
+            className="text-primary   hover:text-primary-dark transition-colors text-sm"
           >
             {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
           </button>

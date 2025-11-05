@@ -7,7 +7,7 @@ import UpcomingHolidays from "../components/dashboard/UpcomingHolidays";
 
 const Dashboard = () => {
   return (
-    <div className="p-8 space-y-6">
+    <div className="py-8 px-0 md:px-4 space-y-6">
       <DashboardHeader />
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">

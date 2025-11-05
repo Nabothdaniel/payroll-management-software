@@ -10,7 +10,7 @@ const Employees = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="p-8 space-y-6">
+    <div className=" px-0 md:p-8 space-y-6">
       {/* Header */}
       <motion.div
         className="flex items-center justify-between"
@@ -24,11 +24,12 @@ const Employees = () => {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="btn-primary flex items-center gap-2"
+          className="btn-primary flex items-center justify-center rounded-md text-sm gap-2 h-10 px-4"
         >
           <Plus className="w-4 h-4" />
           Add Employee
         </button>
+
       </motion.div>
 
       {/* Employee List */}

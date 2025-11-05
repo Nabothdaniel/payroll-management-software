@@ -13,7 +13,7 @@ const PaymentCycle = () => {
   const { employees } = useEmployees();
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="px-0 md:p-8 space-y-6">
       <CycleHeader onCreate={() => setIsCreateModalOpen(true)} />
       <CycleList selectedCycle={selectedCycle} onSelect={setSelectedCycle} />
       <StatsCards />

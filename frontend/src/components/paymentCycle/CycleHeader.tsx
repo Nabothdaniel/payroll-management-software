@@ -22,10 +22,14 @@ const CycleHeader = ({ onCreate }: Props) => {
           <Filter className="w-4 h-4" />
           Filter
         </button>
-        <button onClick={onCreate} className="btn-primary flex items-center gap-2">
+        <button
+          onClick={onCreate}
+          className="btn-primary inline-flex items-center justify-center gap-2 px-3 h-10 text-sm rounded-md"
+        >
           <Plus className="w-4 h-4" />
           Create Cycle
         </button>
+
       </div>
     </motion.div>
   );

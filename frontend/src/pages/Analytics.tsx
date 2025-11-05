@@ -30,7 +30,7 @@ const formatNaira = (amount: number | string, isCurrency = true) =>
 
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="px-0 md:p-8 space-y-6">
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
         <h1 className="text-3xl font-bold text-text-primary">Analytics & Reports</h1>
