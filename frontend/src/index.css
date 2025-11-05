@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Payroll Management Design System */
+@layer base {
+  :root {
+    /* Brand Colors */
+    --primary: 173 80% 40%;
+    --primary-light: 173 70% 50%;
+    --primary-dark: 173 80% 30%;
+    
+    /* Backgrounds */
+    --bg-main: 210 20% 98%;
+    --bg-sidebar: 0 0% 100%;
+    --bg-card: 0 0% 100%;
+    
+    /* Text Colors */
+    --text-primary: 220 20% 10%;
+    --text-secondary: 220 10% 40%;
+    --text-muted: 220 10% 60%;
+    
+    /* Chart Colors */
+    --chart-blue: 217 91% 60%;
+    --chart-cyan: 187 85% 53%;
+    --chart-purple: 271 76% 53%;
+    --chart-orange: 25 95% 53%;
+    --chart-red: 0 84% 60%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    --info: 199 89% 48%;
+    
+    /* Borders */
+    --border: 220 13% 91%;
+    --border-light: 220 13% 95%;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+
+  * {
+    @apply border-[hsl(var(--border))];
+  }
+
+  body {
+    @apply bg-[hsl(var(--bg-main))] text-[hsl(var(--text-primary))] font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  /* ✅ Define base .btn class */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-[hsl(var(--primary))] text-white hover:bg-[hsl(var(--primary-dark))] active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-[hsl(var(--text-primary))] hover:bg-gray-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-gray-100 active:scale-95;
+  }
+
+  .input {
+    @apply px-4 py-2 rounded-lg border border-[hsl(var(--border))] bg-white focus:outline-none focus:border-[hsl(var(--primary))] focus:ring-2 focus:ring-[hsl(var(--primary))]/20 transition-all;
+  }
+
+  .card {
+    @apply bg-[hsl(var(--bg-card))] rounded-xl border border-[hsl(var(--border))] shadow-[var(--shadow-sm)];
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    @apply text-[hsl(var(--text-muted))];
+  }
+
+  .text-secondary {
+    @apply text-[hsl(var(--text-secondary))];
+  }
+
+  .bg-primary {
+    @apply bg-[hsl(var(--primary))];
+  }
+
+  .bg-primary-light {
+    @apply bg-[hsl(var(--primary-light))];
+  }
+
+  .text-primary {
+    @apply text-[hsl(var(--primary))];
+  }
+
+  .border-primary {
+    @apply border-[hsl(var(--primary))];
+  }
+}
